@@ -1,38 +1,36 @@
-import React from 'react'
+import React from 'react';
 
 const Video = () => {
   return (
-    <div className='h-full w-full relative overflow-hidden'>
-      {/* Fallback image for when video fails to load */}
-      <img 
-        className='h-full w-full object-cover absolute inset-0 lazy-image' 
+    <div className="h-full w-full relative overflow-hidden">
+      {/* Fallback image */}
+      <img
+        className="h-full w-full object-cover absolute inset-0 z-0"
         src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
         alt="Creative workspace background"
         loading="lazy"
-        onLoad={(e) => e.target.classList.add('loaded')}
       />
-      
-      {/* Main video with native loop handling */}
-      <video 
-        className='h-full w-full object-cover relative z-10 video-background' 
-        autoPlay 
-        loop 
-        muted 
+
+      {/* Main video */}
+      <video
+        className="h-full w-full object-cover absolute inset-0 z-10"
+        autoPlay
+        loop
+        muted
         playsInline
-        preload="metadata"
+        preload="auto"
         onError={(e) => {
-          // Hide video on error, fallback image will show
-          e.target.style.display = 'none';
-        }}
-        style={{
-          objectPosition: 'center center'
+          e.target.style.display = 'none'; // hide if video fails
         }}
       >
-        <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        <source
+          src="/videos/bg.mp4" // ⚡ Try putting video in public/videos/bg.mp4
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>
-  )
-}
+  );
+};
 
-export default Video
+export default Video;
