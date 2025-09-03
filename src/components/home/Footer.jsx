@@ -43,16 +43,16 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className='section-dark text-white relative depth-3'>
       <div className="cinematic-overlay"></div>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
+      <div className='container mx-auto section-padding'>
         {/* Main CTA Section */}
-        <div className='text-center mb-20 footer-content'>
-          <div className='floating-panel-dark p-12 lg:p-16 space-y-8'>
-            <h2 className='font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3 text-glow'>
+        <div className='text-center component-margin footer-content'>
+          <div className='floating-panel-dark space-y-6 sm:space-y-8'>
+            <h2 className='font-[font2] text-4xl sm:text-5xl lg:text-[6vw] uppercase mb-4 sm:mb-6 lg:mb-8 leading-tight text-layer-3 text-glow'>
             Let's Talk About Your Project
             </h2>
-            <div className='inline-flex items-center'>
-              <button className='btn-pill btn-primary lg:h-16 h-12 px-8 lg:px-12 group'>
-                <span className='font-[font2] text-lg lg:text-xl'>
+            <div className='flex justify-center'>
+              <button className='btn-pill btn-primary h-12 sm:h-14 lg:h-16 px-6 sm:px-8 lg:px-12 group'>
+                <span className='font-[font2] text-base sm:text-lg lg:text-xl'>
                 Inquire Now
                 </span>
               </button>
@@ -61,13 +61,13 @@ const Footer = () => {
         </div>
 
         {/* Footer Information Grid */}
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 lg:gap-12 mb-16'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mb-12 sm:mb-16'>
           {/* Quick Links */}
-          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
+          <div className='footer-content floating-panel-dark space-y-4 sm:space-y-6'>
+            <h3 className='font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-[#D3FD50] mb-4 sm:mb-6 text-layer-2'>
               Quick Links
             </h3>
-            <ul className='space-y-4'>
+            <ul className='space-y-3 sm:space-y-4'>
               <li>
                 <button 
                   onClick={() => {
@@ -76,7 +76,7 @@ const Footer = () => {
                       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }
                   }}
-                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover text-left micro-bounce'
+                  className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 interactive-hover text-left micro-bounce w-full text-left'
                 >
                   Our Portfolio0
                 </button>
@@ -84,7 +84,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/contact"
-                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
+                  className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 interactive-hover micro-bounce block'
                 >
                   Contact
                 </Link>
@@ -92,7 +92,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/privacy-policy"
-                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
+                  className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 interactive-hover micro-bounce block'
                 >
                   Privacy Policy
                 </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/terms-of-service"
-                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
+                  className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 interactive-hover micro-bounce block'
                 >
                   Terms & Conditions
                 </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/affiliate-program"
-                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
+                  className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 interactive-hover micro-bounce block'
                 >
                   Affiliate Program
                 </Link>
@@ -117,11 +117,11 @@ const Footer = () => {
           </div>
 
           {/* Company Address */}
-          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
+          <div className='footer-content floating-panel-dark space-y-4 sm:space-y-6'>
+            <h3 className='font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-[#D3FD50] mb-4 sm:mb-6 text-layer-2 text-glow'>
               Address
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-layer-1 leading-relaxed space-y-2'>
+            <div className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 leading-relaxed space-y-1 sm:space-y-2'>
               <p>22 ruelle du Clerc</p>
               <p>59126, Linselles</p>
               <p>(France)</p>
@@ -129,27 +129,27 @@ const Footer = () => {
           </div>
 
           {/* Hours of Operation */}
-          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
+          <div className='footer-content floating-panel-dark space-y-4 sm:space-y-6'>
+            <h3 className='font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-[#D3FD50] mb-4 sm:mb-6 text-layer-2 text-glow'>
               Hours
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-layer-1 space-y-3'>
+            <div className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1 space-y-2 sm:space-y-3'>
               <p>M–F: 9am – 7pm (UTC+1)</p>
               <p>Saturday & Sunday: Closed</p>
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
+          <div className='footer-content floating-panel-dark space-y-4 sm:space-y-6'>
+            <h3 className='font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-[#D3FD50] mb-4 sm:mb-6 text-layer-2 text-glow'>
               Contact
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-layer-1'>
+            <div className='font-[font1] text-sm sm:text-base lg:text-lg text-layer-1'>
               <a 
                 href="mailto:contact@amouraworks.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className='interactive-hover micro-bounce'
+                className='interactive-hover micro-bounce break-all sm:break-normal'
               >
                 contact@amouraworks.com
               </a>
@@ -158,9 +158,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Border Line */}
-        <div className='floating-panel-dark p-6 text-center'>
+        <div className='floating-panel-dark text-center'>
           <div className='text-center'>
-            <p className='font-[font1] text-sm lg:text-base text-layer-1'>
+            <p className='font-[font1] text-xs sm:text-sm lg:text-base text-layer-1'>
               © 2025 Amoura Works. All rights reserved.
             </p>
           </div>

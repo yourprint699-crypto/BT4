@@ -110,43 +110,43 @@ const WhyUsSection = () => {
       className="min-h-screen section-dark text-white relative depth-3 section-transition"
     >
       <div className="cinematic-overlay"></div>
-      <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
+      <div className="container mx-auto section-padding">
         {/* Section Header */}
-        <div className="text-center mb-24 space-y-8">
-          <h2 className="why-us-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow">
+        <div className="text-center component-margin space-y-4 sm:space-y-6 lg:space-y-8">
+          <h2 className="why-us-title font-[font2] heading-responsive-xl uppercase mb-4 sm:mb-6 lg:mb-8 leading-tight text-layer-3 text-glow">
           Get to Know the Amoura Promise
           </h2>
-          <div className="floating-panel-dark max-w-2xl mx-auto p-8">
-            <p className="intro-text font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2">
+          <div className="floating-panel-dark max-width-content">
+            <p className="intro-text font-[font1] text-responsive leading-relaxed text-layer-2">
             Creative • Reliable • Timely
             </p>
           </div>
         </div>
 
         {/* Benefits Grid */}
-        <div className="benefits-grid grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16 lg:max-w-6xl max-w-4xl mx-auto">
+        <div className="benefits-grid responsive-grid-2 max-width-wide">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="benefit-card group floating-panel-dark glass-hover glass-click p-10 lg:p-12 gpu-accelerated"
+              className="benefit-card group floating-panel-dark glass-hover glass-click gpu-accelerated"
             >
               {/* Icon */}
-              <div className="text-6xl lg:text-7xl mb-8 micro-bounce glow-accent">
+              <div className="text-5xl sm:text-6xl lg:text-7xl mb-6 sm:mb-8 micro-bounce glow-accent">
                 {benefit.icon}
               </div>
 
               {/* Content */}
-              <div className="space-y-6">
-                <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-layer-2">
+              <div className="space-y-4 sm:space-y-6">
+                <h3 className="font-[font2] heading-responsive-md uppercase text-layer-2">
                   {benefit.title}
                 </h3>
-                <p className="font-[font1] text-base lg:text-lg leading-relaxed text-layer-1">
+                <p className="font-[font1] text-responsive leading-relaxed text-layer-1">
                   {benefit.description}
                 </p>
               </div>
 
               {/* Hover accent line */}
-              <div className="w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] mt-8 rounded-full glow-accent accent-line"></div>
+              <div className="w-full accent-line mt-6 sm:mt-8 rounded-full glow-accent"></div>
             </div>
           ))}
         </div>

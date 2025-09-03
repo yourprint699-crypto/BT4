@@ -73,55 +73,55 @@ const ContactSection = () => {
       className="min-h-screen section-dark text-white relative depth-3 section-transition"
     >
       <div className="cinematic-overlay"></div>
-      <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
-        <div className="text-center mb-24 space-y-8">
-          <h2 className="contact-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow">
+      <div className="container mx-auto section-padding">
+        <div className="text-center component-margin space-y-4 sm:space-y-6 lg:space-y-8">
+          <h2 className="contact-title font-[font2] heading-responsive-xl uppercase mb-4 sm:mb-6 lg:mb-8 leading-tight text-layer-3 text-glow">
             Get In Touch
           </h2>
-          <div className="floating-panel-dark max-w-3xl mx-auto p-8">
-            <p className="font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2">
+          <div className="floating-panel-dark max-width-content">
+            <p className="font-[font1] text-responsive leading-relaxed text-layer-2">
             The first step to your perfect film is a simple hello. Reach out to us today :)
             </p>
           </div>
         </div>
 
-        <div className="contact-grid grid lg:grid-cols-2 grid-cols-1 gap-16 lg:gap-20 max-w-7xl mx-auto">
+        <div className="contact-grid responsive-grid-2 max-width-wide">
           {/* Contact Information */}
-          <div className="space-y-10">
-            <div className="contact-info floating-panel-dark p-8 lg:p-10 space-y-6">
-              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2 text-glow">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+            <div className="contact-info floating-panel-dark space-y-4 sm:space-y-6">
+              <h3 className="font-[font2] heading-responsive-md uppercase text-[#D3FD50] text-layer-2 text-glow">
                 Contact Details
               </h3>
-              <div className="space-y-4 font-[font1] text-lg lg:text-xl text-layer-1">
-                <p className="flex items-center space-x-4">
+              <div className="space-y-3 sm:space-y-4 font-[font1] text-responsive text-layer-1">
+                <p className="flex items-start sm:items-center space-x-3 sm:space-x-4">
                   <span className="micro-bounce glow-accent">📧</span>
-                  <span>contact@amouraworks.com</span>
+                  <span className="break-all sm:break-normal">contact@amouraworks.com</span>
                 </p>
-                <p className="flex items-center space-x-4">
+                <p className="flex items-start sm:items-center space-x-3 sm:space-x-4">
                   <span className="micro-bounce glow-accent">📍</span>
                   <span>22 ruelle du Clerc, 59126, Linselles (France)</span>
                 </p>
-                <p className="flex items-center space-x-4">
+                <p className="flex items-start sm:items-center space-x-3 sm:space-x-4">
                   <span className="micro-bounce glow-accent">🕒</span>
                   <span>M–F: 9am – 7pm (UTC+1)</span>
                 </p>
               </div>
             </div>
 
-            <div className="contact-info floating-panel-dark p-8 lg:p-10 space-y-6">
-              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2 text-glow">
+            <div className="contact-info floating-panel-dark space-y-4 sm:space-y-6">
+              <h3 className="font-[font2] heading-responsive-md uppercase text-[#D3FD50] text-layer-2 text-glow">
                 Follow Us
               </h3>
-              <div className="flex space-x-6">
+              <div className="flex justify-center sm:justify-start space-x-4 sm:space-x-6">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 lg:w-14 lg:h-14 glass glass-hover glass-click rounded-full flex items-center justify-center group glow-accent"
+                    className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 glass glass-hover glass-click rounded-full flex items-center justify-center group glow-accent"
                   >
-                    <span className="text-xl lg:text-2xl micro-bounce glow-accent">
+                    <span className="text-lg sm:text-xl lg:text-2xl micro-bounce glow-accent">
                       {social.icon}
                     </span>
                   </a>
@@ -129,24 +129,24 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="contact-info floating-panel-dark p-8 lg:p-10">
-              <h4 className="font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow">
+            <div className="contact-info floating-panel-dark">
+              <h4 className="font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-[#D3FD50] mb-4 sm:mb-6 text-layer-2 text-glow">
                   Quick Response Guarantee
               </h4>
-              <p className="font-[font1] text-base lg:text-lg text-layer-1 leading-relaxed">
+              <p className="font-[font1] text-responsive text-layer-1 leading-relaxed">
                   We respond to all inquiries within 24 hours. Your project deserves our immediate attention.
               </p>
             </div>
           </div>
 
           {/* Quick Contact Form */}
-          <div className="contact-info floating-panel-dark p-10 lg:p-12">
-            <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] mb-10 text-layer-2 text-glow">
+          <div className="contact-info floating-panel-dark">
+            <h3 className="font-[font2] heading-responsive-md uppercase text-[#D3FD50] mb-6 sm:mb-8 lg:mb-10 text-layer-2 text-glow">
                 Quick Inquiry
             </h3>
 
-            <form className="space-y-8">
-              <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+            <form className="space-y-6 sm:space-y-8">
+              <div className="form-grid form-grid-2 gap-4 sm:gap-6">
                   <input
                     type="text"
                     placeholder="First Name"
@@ -173,13 +173,13 @@ const ContactSection = () => {
 
                 <textarea
                   placeholder="Tell us about your wedding vision..."
-                  rows="4"
+                  rows="3"
                   className="w-full input-inset text-white placeholder-gray-400 resize-none"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="w-full btn-pill btn-primary lg:h-14 h-12 font-[font2] text-lg lg:text-xl"
+                  className="w-full btn-pill btn-primary h-12 sm:h-14 font-[font2] text-base sm:text-lg lg:text-xl"
                 >
                   Send Inquiry
                 </button>

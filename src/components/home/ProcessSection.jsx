@@ -85,45 +85,45 @@ const ProcessSection = () => {
   return (
     <section id="process" ref={sectionRef} className='min-h-screen section-dark text-white relative depth-3 section-transition'>
       <div className="cinematic-overlay"></div>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
-        <div className='text-center mb-24 space-y-8'>
-          <h2 className='process-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow'>
+      <div className='container mx-auto section-padding'>
+        <div className='text-center component-margin space-y-4 sm:space-y-6 lg:space-y-8'>
+          <h2 className='process-title font-[font2] heading-responsive-xl uppercase mb-4 sm:mb-6 lg:mb-8 leading-tight text-layer-3 text-glow'>
             Our Process
           </h2>
-          <div className='floating-panel-dark max-w-3xl mx-auto p-8'>
-            <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2'>
+          <div className='floating-panel-dark max-width-content'>
+            <p className='font-[font1] text-responsive leading-relaxed text-layer-2'>
             Un processus éprouvé qui garantit des résultats exceptionnels à chaque étape de votre projet.
             </p>
           </div>
         </div>
 
-        <div className='process-timeline max-w-5xl mx-auto space-y-8'>
+        <div className='process-timeline max-width-content space-y-6 sm:space-y-8'>
           {processSteps.map((step, index) => (
             <div 
               key={index}
               className='process-step group relative'
             >
-              <div className='floating-panel-dark glass-hover p-8 lg:p-10 flex items-start space-x-8'>
+              <div className='floating-panel-dark glass-hover flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8'>
                 {/* Step Number */}
-                <div className='flex-shrink-0'>
-                  <div className='w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] rounded-full flex items-center justify-center micro-bounce glow-accent animate-glow-pulse'>
-                    <span className='font-[font2] text-xl lg:text-2xl text-black'>
+                <div className='flex-shrink-0 self-center sm:self-start'>
+                  <div className='w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] rounded-full flex items-center justify-center micro-bounce glow-accent animate-glow-pulse'>
+                    <span className='font-[font2] text-lg sm:text-xl lg:text-2xl text-black'>
                       {step.step}
                     </span>
                   </div>
                 </div>
 
                 {/* Step Content */}
-                <div className='flex-1 space-y-4'>
-                  <div className='flex justify-between items-start mb-6'>
-                    <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-layer-2'>
+                <div className='flex-1 space-y-3 sm:space-y-4 text-center sm:text-left'>
+                  <div className='flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 sm:mb-6 space-y-2 sm:space-y-0'>
+                    <h3 className='font-[font2] text-lg sm:text-xl lg:text-2xl uppercase text-layer-2'>
                       {step.title}
                     </h3>
-                    <span className='font-[font1] text-sm lg:text-base text-layer-1 glass px-4 py-2 rounded-full micro-bounce'>
+                    <span className='font-[font1] text-xs sm:text-sm lg:text-base text-layer-1 glass px-3 sm:px-4 py-1 sm:py-2 rounded-full micro-bounce self-center sm:self-auto'>
                       {step.duration}
                     </span>
                   </div>
-                  <p className='font-[font1] text-base lg:text-lg leading-relaxed text-layer-1'>
+                  <p className='font-[font1] text-responsive leading-relaxed text-layer-1'>
                     {step.description}
                   </p>
                 </div>
@@ -131,7 +131,7 @@ const ProcessSection = () => {
               
               {/* Progress line */}
               {index < processSteps.length - 1 && (
-                <div className='absolute left-8 lg:left-10 -bottom-4 w-1 h-8 bg-gradient-to-b from-[#D3FD50] to-transparent rounded-full glow-accent accent-line-vertical'></div>
+                <div className='absolute left-1/2 sm:left-6 lg:left-10 -bottom-3 sm:-bottom-4 accent-line-vertical h-6 sm:h-8 bg-gradient-to-b from-[#D3FD50] to-transparent rounded-full glow-accent transform -translate-x-1/2 sm:translate-x-0'></div>
               )}
             </div>
           ))}

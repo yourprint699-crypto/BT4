@@ -106,35 +106,35 @@ const Projects = () => {
   return (
     <PageWrapper className='section-dark'>
       <div className="cinematic-overlay"></div>
-      <div className='lg:px-12 px-6 lg:py-20 py-12 mb-[50vh]'>
+      <div className='container mx-auto section-padding mb-[30vh] sm:mb-[40vh] lg:mb-[50vh]'>
       {/* Page Header */}
-      <div className='pt-[35vh] mb-24 text-center'>
-        <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-white text-layer-3 text-glow'>
+      <div className='pt-[25vh] sm:pt-[30vh] lg:pt-[35vh] component-margin text-center'>
+        <h1 className='font-[font2] heading-responsive-xl uppercase text-white text-layer-3 text-glow'>
           Projets
         </h1>
       </div>
 
-      <div className='projects-content space-y-32'>
+      <div className='projects-content space-y-16 sm:space-y-24 lg:space-y-32'>
         {/* Teasers Section */}
-        <section className='floating-panel-dark p-12 lg:p-16 space-y-12'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-layer-2 text-glow'>
+        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12'>
+          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
             Teasers
           </h2>
           <VideoGrid 
             videos={teasers} 
-            gridCols="lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12"
+            gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
             aspectRatio="aspect-video"
           />
         </section>
 
         {/* Highlights Section */}
-        <section className='floating-panel-dark p-12 lg:p-16 space-y-12'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-layer-2 text-glow'>
+        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12'>
+          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
             Highlights
           </h2>
           <VideoGrid 
             videos={highlights} 
-            gridCols="lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12"
+            gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             aspectRatio="aspect-video"
           />
         </section>

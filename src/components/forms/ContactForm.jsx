@@ -9,15 +9,15 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='floating-panel-dark p-10 lg:p-12'>
-      <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-[#D3FD50] mb-10 text-layer-2 text-glow'>
+    <div className='floating-panel-dark'>
+      <h2 className='font-[font2] heading-responsive-lg uppercase text-[#D3FD50] mb-6 sm:mb-8 lg:mb-10 text-layer-2 text-glow'>
         Inquire Now
       </h2>
       
       <PersistentForm 
         formId="contact-inquiry" 
         onSubmit={handleSubmit}
-        className='space-y-8'
+        className='space-y-6 sm:space-y-8'
       >
         <ContactFormFields />
       </PersistentForm>
@@ -35,7 +35,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
 
   return (
     <>
-      <div className='grid lg:grid-cols-2 grid-cols-1 gap-6'>
+      <div className='form-grid form-grid-2 gap-4 sm:gap-6'>
         <input 
           type="text" 
           name="firstName"
@@ -112,13 +112,13 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         placeholder="Tell us about your wedding vision, special requests, or any questions you have..."
         value={formData.message || ''}
         onChange={handleChange}
-        rows="5"
+        rows="4"
         className='w-full input-inset text-white placeholder:text-gray-400 resize-none'
       />
       
       <button 
         type="submit"
-        className='w-full btn-pill btn-primary lg:h-16 h-14 font-[font2] text-xl lg:text-2xl'
+        className='w-full btn-pill btn-primary h-12 sm:h-14 lg:h-16 font-[font2] text-base sm:text-xl lg:text-2xl'
       >
         Send Inquiry
       </button>
