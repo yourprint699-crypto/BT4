@@ -70,15 +70,16 @@ const ContactSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative depth-3 section-transition"
+      className="min-h-screen section-dark text-white relative depth-3 section-transition"
     >
+      <div className="cinematic-overlay"></div>
       <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
         <div className="text-center mb-24 space-y-8">
-          <h2 className="contact-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3">
+          <h2 className="contact-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow">
             Get In Touch
           </h2>
           <div className="floating-panel-dark max-w-3xl mx-auto p-8">
-            <p className="font-[font1] lg:text-xl text-lg leading-relaxed text-gray-300">
+            <p className="font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2">
             The first step to your perfect film is a simple hello. Reach out to us today :)
             </p>
           </div>
@@ -88,27 +89,27 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-10">
             <div className="contact-info floating-panel-dark p-8 lg:p-10 space-y-6">
-              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2">
+              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2 text-glow">
                 Contact Details
               </h3>
-              <div className="space-y-4 font-[font1] text-lg lg:text-xl text-gray-300">
+              <div className="space-y-4 font-[font1] text-lg lg:text-xl text-layer-1">
                 <p className="flex items-center space-x-4">
-                  <span className="micro-bounce">📧</span>
+                  <span className="micro-bounce glow-accent">📧</span>
                   <span>contact@amouraworks.com</span>
                 </p>
                 <p className="flex items-center space-x-4">
-                  <span className="micro-bounce">📍</span>
+                  <span className="micro-bounce glow-accent">📍</span>
                   <span>22 ruelle du Clerc, 59126, Linselles (France)</span>
                 </p>
                 <p className="flex items-center space-x-4">
-                  <span className="micro-bounce">🕒</span>
+                  <span className="micro-bounce glow-accent">🕒</span>
                   <span>M–F: 9am – 7pm (UTC+1)</span>
                 </p>
               </div>
             </div>
 
             <div className="contact-info floating-panel-dark p-8 lg:p-10 space-y-6">
-              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2">
+              <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] text-layer-2 text-glow">
                 Follow Us
               </h3>
               <div className="flex space-x-6">
@@ -120,7 +121,7 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="w-12 h-12 lg:w-14 lg:h-14 glass glass-hover glass-click rounded-full flex items-center justify-center group glow-accent"
                   >
-                    <span className="text-xl lg:text-2xl micro-bounce">
+                    <span className="text-xl lg:text-2xl micro-bounce glow-accent">
                       {social.icon}
                     </span>
                   </a>
@@ -129,10 +130,10 @@ const ContactSection = () => {
             </div>
 
             <div className="contact-info floating-panel-dark p-8 lg:p-10">
-              <h4 className="font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2">
+              <h4 className="font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow">
                   Quick Response Guarantee
               </h4>
-              <p className="font-[font1] text-base lg:text-lg text-gray-300 leading-relaxed text-layer-1">
+              <p className="font-[font1] text-base lg:text-lg text-layer-1 leading-relaxed">
                   We respond to all inquiries within 24 hours. Your project deserves our immediate attention.
               </p>
             </div>
@@ -140,7 +141,7 @@ const ContactSection = () => {
 
           {/* Quick Contact Form */}
           <div className="contact-info floating-panel-dark p-10 lg:p-12">
-            <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] mb-10 text-layer-2">
+            <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-[#D3FD50] mb-10 text-layer-2 text-glow">
                 Quick Inquiry
             </h3>
 

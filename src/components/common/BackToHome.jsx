@@ -15,10 +15,10 @@ const BackToHome = () => {
         to='/'
         className='group flex items-center space-x-4 glass glass-hover glass-click px-8 py-4'
       >
-        <span className='text-xl micro-bounce'>
+        <span className='text-xl micro-bounce glow-accent'>
           ←
         </span>
-        <span className='font-[font2] text-sm lg:text-base uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500'>
+        <span className='font-[font2] text-sm lg:text-base uppercase text-layer-2'>
           Home
         </span>
       </Link>

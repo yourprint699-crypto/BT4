@@ -108,11 +108,12 @@ const StatsSection = () => {
   }, [hasAnimated])
 
   return (
-    <section id="stats" ref={sectionRef} className='min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition'>
+    <section id="stats" ref={sectionRef} className='min-h-screen section-dark text-white relative depth-3 section-transition'>
+      <div className="cinematic-overlay"></div>
       <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
         {/* Section Header */}
         <div className='text-center mb-24 space-y-8'>
-          <h2 className='stats-title font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3'>
+          <h2 className='stats-title font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3 text-glow'>
             A Few Stats About Us
           </h2>
         </div>
@@ -122,30 +123,30 @@ const StatsSection = () => {
           {statsData.map((stat, index) => (
             <div 
               key={index}
-              className='stat-card group floating-panel glass-hover glass-click p-12 lg:p-16 text-center gpu-accelerated'
+              className='stat-card group floating-panel-dark glass-hover glass-click p-12 lg:p-16 text-center gpu-accelerated'
             >
               {/* Icon */}
-              <div className='text-5xl lg:text-6xl mb-8 micro-bounce'>
+              <div className='text-5xl lg:text-6xl mb-8 micro-bounce glow-accent'>
                 {stat.icon}
               </div>
               
               {/* Number */}
               <div className='mb-6'>
-                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
+                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-layer-2 glow-accent text-glow-strong' style={{background: 'none', backgroundColor: 'transparent'}}>
                   0
                 </span>
-                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
+                <span className='font-[font2] text-4xl lg:text-5xl text-layer-2 glow-accent text-glow-strong' style={{background: 'none', backgroundColor: 'transparent'}}>
                   {stat.suffix}
                 </span>
               </div>
               
               {/* Label */}
-              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 text-layer-1'>
+              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-layer-1'>
                 {stat.label}
               </p>
 
               {/* Hover accent line */}
-              <div className='w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] mt-8 rounded-full mx-auto glow-accent'></div>
+              <div className='w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] mt-8 rounded-full mx-auto glow-accent accent-line'></div>
             </div>
           ))}
         </div>

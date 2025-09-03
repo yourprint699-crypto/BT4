@@ -83,14 +83,15 @@ const ProcessSection = () => {
   ]
 
   return (
-    <section id="process" ref={sectionRef} className='min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition'>
+    <section id="process" ref={sectionRef} className='min-h-screen section-dark text-white relative depth-3 section-transition'>
+      <div className="cinematic-overlay"></div>
       <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
         <div className='text-center mb-24 space-y-8'>
-          <h2 className='process-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3'>
+          <h2 className='process-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow'>
             Our Process
           </h2>
-          <div className='floating-panel max-w-3xl mx-auto p-8'>
-            <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700'>
+          <div className='floating-panel-dark max-w-3xl mx-auto p-8'>
+            <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2'>
             Un processus éprouvé qui garantit des résultats exceptionnels à chaque étape de votre projet.
             </p>
           </div>
@@ -102,10 +103,10 @@ const ProcessSection = () => {
               key={index}
               className='process-step group relative'
             >
-              <div className='floating-panel glass-hover p-8 lg:p-10 flex items-start space-x-8'>
+              <div className='floating-panel-dark glass-hover p-8 lg:p-10 flex items-start space-x-8'>
                 {/* Step Number */}
                 <div className='flex-shrink-0'>
-                  <div className='w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] rounded-full flex items-center justify-center micro-bounce glow-accent'>
+                  <div className='w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] rounded-full flex items-center justify-center micro-bounce glow-accent animate-glow-pulse'>
                     <span className='font-[font2] text-xl lg:text-2xl text-black'>
                       {step.step}
                     </span>
@@ -115,14 +116,14 @@ const ProcessSection = () => {
                 {/* Step Content */}
                 <div className='flex-1 space-y-4'>
                   <div className='flex justify-between items-start mb-6'>
-                    <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2'>
+                    <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-layer-2'>
                       {step.title}
                     </h3>
-                    <span className='font-[font1] text-sm lg:text-base text-gray-500 bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full glass micro-bounce'>
+                    <span className='font-[font1] text-sm lg:text-base text-layer-1 glass px-4 py-2 rounded-full micro-bounce'>
                       {step.duration}
                     </span>
                   </div>
-                  <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1'>
+                  <p className='font-[font1] text-base lg:text-lg leading-relaxed text-layer-1'>
                     {step.description}
                   </p>
                 </div>
@@ -130,7 +131,7 @@ const ProcessSection = () => {
               
               {/* Progress line */}
               {index < processSteps.length - 1 && (
-                <div className='absolute left-8 lg:left-10 -bottom-4 w-1 h-8 bg-gradient-to-b from-[#D3FD50] to-transparent rounded-full glow-accent'></div>
+                <div className='absolute left-8 lg:left-10 -bottom-4 w-1 h-8 bg-gradient-to-b from-[#D3FD50] to-transparent rounded-full glow-accent accent-line-vertical'></div>
               )}
             </div>
           ))}

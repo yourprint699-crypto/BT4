@@ -41,12 +41,13 @@ const Footer = () => {
   ]
 
   return (
-    <footer ref={footerRef} className='bg-gradient-to-br from-black to-gray-900 text-white relative depth-3'>
+    <footer ref={footerRef} className='section-dark text-white relative depth-3'>
+      <div className="cinematic-overlay"></div>
       <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
         {/* Main CTA Section */}
         <div className='text-center mb-20 footer-content'>
           <div className='floating-panel-dark p-12 lg:p-16 space-y-8'>
-            <h2 className='font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3'>
+            <h2 className='font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3 text-glow'>
             Let's Talk About Your Project
             </h2>
             <div className='inline-flex items-center'>
@@ -75,7 +76,7 @@ const Footer = () => {
                       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }
                   }}
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline text-left micro-bounce'
+                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover text-left micro-bounce'
                 >
                   Our Portfolio0
                 </button>
@@ -83,7 +84,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/contact"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
+                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
                 >
                   Contact
                 </Link>
@@ -91,7 +92,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/privacy-policy"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
+                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
                 >
                   Privacy Policy
                 </Link>
@@ -99,7 +100,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/terms-of-service"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
+                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
                 >
                   Terms & Conditions
                 </Link>
@@ -107,7 +108,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/affiliate-program"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
+                  className='font-[font1] text-base lg:text-lg text-layer-1 interactive-hover micro-bounce'
                 >
                   Affiliate Program
                 </Link>
@@ -117,10 +118,10 @@ const Footer = () => {
 
           {/* Company Address */}
           <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
               Address
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-gray-300 leading-relaxed space-y-2'>
+            <div className='font-[font1] text-base lg:text-lg text-layer-1 leading-relaxed space-y-2'>
               <p>22 ruelle du Clerc</p>
               <p>59126, Linselles</p>
               <p>(France)</p>
@@ -129,10 +130,10 @@ const Footer = () => {
 
           {/* Hours of Operation */}
           <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
               Hours
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-gray-300 space-y-3'>
+            <div className='font-[font1] text-base lg:text-lg text-layer-1 space-y-3'>
               <p>M–F: 9am – 7pm (UTC+1)</p>
               <p>Saturday & Sunday: Closed</p>
             </div>
@@ -140,15 +141,15 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2 text-glow'>
               Contact
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-gray-300'>
+            <div className='font-[font1] text-base lg:text-lg text-layer-1'>
               <a 
                 href="mailto:contact@amouraworks.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className='hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
+                className='interactive-hover micro-bounce'
               >
                 contact@amouraworks.com
               </a>
@@ -159,7 +160,7 @@ const Footer = () => {
         {/* Bottom Border Line */}
         <div className='floating-panel-dark p-6 text-center'>
           <div className='text-center'>
-            <p className='font-[font1] text-sm lg:text-base text-gray-400'>
+            <p className='font-[font1] text-sm lg:text-base text-layer-1'>
               © 2025 Amoura Works. All rights reserved.
             </p>
           </div>

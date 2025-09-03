@@ -57,15 +57,16 @@ const PortfolioSection = () => {
   return (
     <section
       id="portfolio"
-      className="min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 overflow-hidden section-transition"
+      className="min-h-screen section-dark-alt text-white relative depth-3 overflow-hidden section-transition"
     >
+      <div className="cinematic-overlay"></div>
       <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
         <div className="text-center mb-24 space-y-8">
-          <h2 className="font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3">
+          <h2 className="font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow">
             Our Portfolio
           </h2>
-          <div className="floating-panel max-w-3xl mx-auto p-8">
-            <p className="font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700">
+          <div className="floating-panel-dark max-w-3xl mx-auto p-8">
+            <p className="font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2">
               Découvrez notre collection de films de mariage cinématographiques
             </p>
           </div>
@@ -74,7 +75,7 @@ const PortfolioSection = () => {
         <div className="portfolio-showcase space-y-20">
           
           {/* Moving Video Track */}
-          <div className="relative w-full overflow-hidden rounded-3xl">
+          <div className="relative w-full overflow-hidden rounded-3xl bg-pattern-dots">
             <div
               ref={trackRef}
               className="flex gap-8 lg:gap-12 w-[200%] py-8" // doubled width for seamless loop

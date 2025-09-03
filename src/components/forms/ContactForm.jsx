@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   return (
     <div className='floating-panel-dark p-10 lg:p-12'>
-      <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-[#D3FD50] mb-10 text-layer-2'>
+      <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-[#D3FD50] mb-10 text-layer-2 text-glow'>
         Inquire Now
       </h2>
       
@@ -43,7 +43,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
           value={formData.firstName || ''}
           onChange={handleChange}
           required
-          className='w-full input-inset text-white placeholder-gray-400'
+          className='w-full input-inset text-white placeholder:text-gray-400'
         />
         <input 
           type="text" 
@@ -52,7 +52,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
           value={formData.lastName || ''}
           onChange={handleChange}
           required
-          className='w-full input-inset text-white placeholder-gray-400'
+          className='w-full input-inset text-white placeholder:text-gray-400'
         />
       </div>
       
@@ -63,7 +63,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.email || ''}
         onChange={handleChange}
         required
-        className='w-full input-inset text-white placeholder-gray-400'
+        className='w-full input-inset text-white placeholder:text-gray-400'
       />
       
       <input 
@@ -72,7 +72,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         placeholder="Phone Number"
         value={formData.phone || ''}
         onChange={handleChange}
-        className='w-full input-inset text-white placeholder-gray-400'
+        className='w-full input-inset text-white placeholder:text-gray-400'
       />
       
       <input 
@@ -82,7 +82,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.weddingDate || ''}
         onChange={handleChange}
         required
-        className='w-full input-inset text-white placeholder-gray-400'
+        className='w-full input-inset text-white placeholder:text-gray-400'
       />
       
       <input 
@@ -91,7 +91,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         placeholder="Wedding Venue"
         value={formData.venue || ''}
         onChange={handleChange}
-        className='w-full input-inset text-white placeholder-gray-400'
+        className='w-full input-inset text-white placeholder:text-gray-400'
       />
       
       <select 
@@ -113,7 +113,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.message || ''}
         onChange={handleChange}
         rows="5"
-        className='w-full input-inset text-white placeholder-gray-400 resize-none'
+        className='w-full input-inset text-white placeholder:text-gray-400 resize-none'
       />
       
       <button 

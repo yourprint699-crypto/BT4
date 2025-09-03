@@ -4,13 +4,13 @@ import { Link, useNavigate } from 'react-router-dom';
 const HomeBottomText = () => {
   return (
     <div className="font-[font2] flex items-center justify-center gap-2 relative depth-4 pb-8">
-      <p className="absolute lg:w-[17vw] w-64 lg:right-20 right-0 bottom-28  lg:bottom-72 font-[font1] lg:text-lg text-xs lg:leading-relaxed leading-tight">
+      <p className="absolute lg:w-[17vw] w-64 lg:right-20 right-0 bottom-28 lg:bottom-72 font-[font1] lg:text-lg text-xs lg:leading-relaxed leading-tight text-layer-2">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         text
       </p>
-      <div className="btn-pill btn-secondary lg:h-44 h-32 px-3 pt-1 lg:px-14 group glass glow-accent">
+      <div className="btn-pill btn-secondary lg:h-44 h-32 px-3 pt-1 lg:px-14 group glass glow-accent animate-glow-pulse">
         <Link
-          className="text-[6vw] lg:mt-6"
+          className="text-[6vw] lg:mt-6 text-layer-3"
           to="/projects"
         >
           Projects

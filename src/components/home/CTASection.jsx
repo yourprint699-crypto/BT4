@@ -84,21 +84,22 @@ const CTASection = () => {
     <section
       id="cta"
       ref={sectionRef}
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative depth-3 flex items-center section-transition"
+      className="min-h-screen section-dark-alt text-white relative depth-3 flex items-center section-transition"
       role="region"
       aria-labelledby="cta-heading"
     >
+      <div className="cinematic-overlay"></div>
       <div className="container mx-auto lg:px-12 px-6 text-center w-full">
         <div className="max-w-5xl mx-auto">
           <div className="floating-panel-dark p-12 lg:p-20 space-y-12">
             <h2 
             id="cta-heading"
-              className="cta-fade font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3"
+              className="cta-fade font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow"
             >
             Ready to Create Magic?
             </h2>
 
-            <p className="cta-fade font-[font1] lg:text-2xl text-xl leading-relaxed text-gray-300 lg:max-w-3xl max-w-xl mx-auto text-layer-1">
+            <p className="cta-fade font-[font1] lg:text-2xl text-xl leading-relaxed text-layer-2 lg:max-w-3xl max-w-xl mx-auto">
             Transformons votre jour spécial en un chef-d'œuvre cinématographique qui raconte votre histoire unique.
             </p>
 
@@ -126,11 +127,11 @@ const CTASection = () => {
 
             <div className="cta-fade grid lg:grid-cols-3 grid-cols-1 gap-8 text-center">
               {statsData.map((stat, index) => (
-                <div key={stat.label} className="floating-panel glass-hover p-6 space-y-4">
-                  <div className="text-3xl lg:text-4xl font-[font2] text-[#D3FD50] glow-accent text-layer-2">
+                <div key={stat.label} className="floating-panel-dark glass-hover p-6 space-y-4">
+                  <div className="text-3xl lg:text-4xl font-[font2] text-[#D3FD50] glow-accent text-layer-2 text-glow-strong">
                   {stat.value}
                   </div>
-                  <div className="font-[font1] text-sm lg:text-base text-gray-400 uppercase tracking-wide text-layer-1">
+                  <div className="font-[font1] text-sm lg:text-base text-layer-1 uppercase tracking-wide">
                   {stat.label}
                   </div>
                 </div>

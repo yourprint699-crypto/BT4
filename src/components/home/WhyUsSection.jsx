@@ -107,16 +107,17 @@ const WhyUsSection = () => {
   return (
     <section
       id="why-us"
-      className="min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition"
+      className="min-h-screen section-dark text-white relative depth-3 section-transition"
     >
+      <div className="cinematic-overlay"></div>
       <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
         {/* Section Header */}
         <div className="text-center mb-24 space-y-8">
-          <h2 className="why-us-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3">
+          <h2 className="why-us-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3 text-glow">
           Get to Know the Amoura Promise
           </h2>
-          <div className="floating-panel max-w-2xl mx-auto p-8">
-            <p className="intro-text font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700">
+          <div className="floating-panel-dark max-w-2xl mx-auto p-8">
+            <p className="intro-text font-[font1] lg:text-xl text-lg leading-relaxed text-layer-2">
             Creative • Reliable • Timely
             </p>
           </div>
@@ -127,25 +128,25 @@ const WhyUsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="benefit-card group floating-panel glass-hover glass-click p-10 lg:p-12 gpu-accelerated"
+              className="benefit-card group floating-panel-dark glass-hover glass-click p-10 lg:p-12 gpu-accelerated"
             >
               {/* Icon */}
-              <div className="text-6xl lg:text-7xl mb-8 micro-bounce">
+              <div className="text-6xl lg:text-7xl mb-8 micro-bounce glow-accent">
                 {benefit.icon}
               </div>
 
               {/* Content */}
               <div className="space-y-6">
-                <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2">
+                <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-layer-2">
                   {benefit.title}
                 </h3>
-                <p className="font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1">
+                <p className="font-[font1] text-base lg:text-lg leading-relaxed text-layer-1">
                   {benefit.description}
                 </p>
               </div>
 
               {/* Hover accent line */}
-              <div className="w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 mt-8 rounded-full glow-accent"></div>
+              <div className="w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] mt-8 rounded-full glow-accent accent-line"></div>
             </div>
           ))}
         </div>

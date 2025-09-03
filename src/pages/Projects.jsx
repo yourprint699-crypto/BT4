@@ -104,19 +104,20 @@ const Projects = () => {
   })
 
   return (
-    <PageWrapper className='bg-gradient-to-br from-gray-50 to-white'>
+    <PageWrapper className='section-dark'>
+      <div className="cinematic-overlay"></div>
       <div className='lg:px-12 px-6 lg:py-20 py-12 mb-[50vh]'>
       {/* Page Header */}
       <div className='pt-[35vh] mb-24 text-center'>
-        <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-black text-layer-3'>
+        <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-white text-layer-3 text-glow'>
           Projets
         </h1>
       </div>
 
       <div className='projects-content space-y-32'>
         {/* Teasers Section */}
-        <section className='floating-panel p-12 lg:p-16 space-y-12'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black text-layer-2'>
+        <section className='floating-panel-dark p-12 lg:p-16 space-y-12'>
+          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-layer-2 text-glow'>
             Teasers
           </h2>
           <VideoGrid 
@@ -127,8 +128,8 @@ const Projects = () => {
         </section>
 
         {/* Highlights Section */}
-        <section className='floating-panel p-12 lg:p-16 space-y-12'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black text-layer-2'>
+        <section className='floating-panel-dark p-12 lg:p-16 space-y-12'>
+          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-layer-2 text-glow'>
             Highlights
           </h2>
           <VideoGrid 
