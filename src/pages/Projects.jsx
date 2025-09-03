@@ -104,36 +104,36 @@ const Projects = () => {
   })
 
   return (
-    <PageWrapper className='bg-white'>
-      <div className='lg:px-12 px-6 lg:py-16 py-8 mb-[50vh]'>
+    <PageWrapper className='bg-gradient-to-br from-gray-50 to-white'>
+      <div className='lg:px-12 px-6 lg:py-20 py-12 mb-[50vh]'>
       {/* Page Header */}
-      <div className='pt-[35vh] mb-16'>
-        <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-black'>
+      <div className='pt-[35vh] mb-24 text-center'>
+        <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-black text-layer-3'>
           Projets
         </h1>
       </div>
 
-      <div className='projects-content space-y-24'>
+      <div className='projects-content space-y-32'>
         {/* Teasers Section */}
-        <section className='space-y-8'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black'>
+        <section className='floating-panel p-12 lg:p-16 space-y-12'>
+          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black text-layer-2'>
             Teasers
           </h2>
           <VideoGrid 
             videos={teasers} 
-            gridCols="lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
+            gridCols="lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12"
             aspectRatio="aspect-video"
           />
         </section>
 
         {/* Highlights Section */}
-        <section className='space-y-8'>
-          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black'>
+        <section className='floating-panel p-12 lg:p-16 space-y-12'>
+          <h2 className='section-title font-[font2] lg:text-6xl text-4xl uppercase text-center text-black text-layer-2'>
             Highlights
           </h2>
           <VideoGrid 
             videos={highlights} 
-            gridCols="lg:grid-cols-4 md:grid-cols-2 grid-cols-1"
+            gridCols="lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12"
             aspectRatio="aspect-video"
           />
         </section>

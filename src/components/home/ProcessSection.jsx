@@ -83,53 +83,55 @@ const ProcessSection = () => {
   ]
 
   return (
-    <section id="process" ref={sectionRef} className='min-h-screen bg-gray-50 text-black relative z-30'>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
-        <div className='text-center mb-16'>
-          <h2 className='process-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight'>
+    <section id="process" ref={sectionRef} className='min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition'>
+      <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
+        <div className='text-center mb-24 space-y-8'>
+          <h2 className='process-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3'>
             Our Process
           </h2>
-          <p className='font-[font1] lg:text-xl text-lg lg:max-w-3xl max-w-xl mx-auto leading-relaxed text-gray-700'>
+          <div className='floating-panel max-w-3xl mx-auto p-8'>
+            <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700'>
             Un processus éprouvé qui garantit des résultats exceptionnels à chaque étape de votre projet.
-          </p>
+            </p>
+          </div>
         </div>
 
-        <div className='process-timeline max-w-4xl mx-auto'>
+        <div className='process-timeline max-w-5xl mx-auto space-y-8'>
           {processSteps.map((step, index) => (
             <div 
               key={index}
-              className='process-step flex items-start mb-12 lg:mb-16 group'
+              className='process-step group relative'
             >
-              {/* Step Number */}
-              <div className='flex-shrink-0 mr-8'>
-                <div className='w-16 h-16 lg:w-20 lg:h-20 bg-[#D3FD50] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                  <span className='font-[font2] text-xl lg:text-2xl text-black'>
-                    {step.step}
-                  </span>
+              <div className='floating-panel glass-hover p-8 lg:p-10 flex items-start space-x-8'>
+                {/* Step Number */}
+                <div className='flex-shrink-0'>
+                  <div className='w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] rounded-full flex items-center justify-center micro-bounce glow-accent'>
+                    <span className='font-[font2] text-xl lg:text-2xl text-black'>
+                      {step.step}
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Step Content */}
-              <div className='flex-1 pt-2'>
-                <div className='bg-white rounded-2xl p-6 lg:p-8 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1'>
-                  <div className='flex justify-between items-start mb-4'>
-                    <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-300'>
+                {/* Step Content */}
+                <div className='flex-1 space-y-4'>
+                  <div className='flex justify-between items-start mb-6'>
+                    <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2'>
                       {step.title}
                     </h3>
-                    <span className='font-[font1] text-sm lg:text-base text-gray-500 bg-gray-100 px-3 py-1 rounded-full'>
+                    <span className='font-[font1] text-sm lg:text-base text-gray-500 bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full glass micro-bounce'>
                       {step.duration}
                     </span>
                   </div>
-                  <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600'>
+                  <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1'>
                     {step.description}
                   </p>
-                  
-                  {/* Progress line */}
-                  {index < processSteps.length - 1 && (
-                    <div className='absolute left-8 lg:left-10 top-20 lg:top-24 w-0.5 h-12 lg:h-16 bg-gray-300 group-hover:bg-[#D3FD50] transition-colors duration-300'></div>
-                  )}
                 </div>
               </div>
+              
+              {/* Progress line */}
+              {index < processSteps.length - 1 && (
+                <div className='absolute left-8 lg:left-10 -bottom-4 w-1 h-8 bg-gradient-to-b from-[#D3FD50] to-transparent rounded-full glow-accent'></div>
+              )}
             </div>
           ))}
         </div>

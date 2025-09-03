@@ -107,43 +107,45 @@ const WhyUsSection = () => {
   return (
     <section
       id="why-us"
-      className="min-h-screen bg-white text-black relative z-30"
+      className="min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition"
     >
-      <div className="container mx-auto lg:px-12 px-6 lg:py-24 py-16">
+      <div className="container mx-auto lg:px-12 px-6 lg:py-32 py-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="why-us-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight">
+        <div className="text-center mb-24 space-y-8">
+          <h2 className="why-us-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3">
           Get to Know the Amoura Promise
           </h2>
-          <p className="intro-text font-[font1] lg:text-xl text-lg lg:max-w-3xl max-w-xl mx-auto leading-relaxed text-gray-700">
+          <div className="floating-panel max-w-2xl mx-auto p-8">
+            <p className="intro-text font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700">
             Creative • Reliable • Timely
-          </p>
+            </p>
+          </div>
         </div>
 
         {/* Benefits Grid */}
-        <div className="benefits-grid grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-12 lg:max-w-6xl max-w-4xl mx-auto">
+        <div className="benefits-grid grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16 lg:max-w-6xl max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="benefit-card group bg-gray-50 hover:bg-gray-100 rounded-2xl p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
+              className="benefit-card group floating-panel glass-hover glass-click p-10 lg:p-12 gpu-accelerated"
             >
               {/* Icon */}
-              <div className="text-6xl lg:text-7xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-6xl lg:text-7xl mb-8 micro-bounce">
                 {benefit.icon}
               </div>
 
               {/* Content */}
-              <div className="space-y-4">
-                <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-300">
+              <div className="space-y-6">
+                <h3 className="font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2">
                   {benefit.title}
                 </h3>
-                <p className="font-[font1] text-base lg:text-lg leading-relaxed text-gray-600">
+                <p className="font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1">
                   {benefit.description}
                 </p>
               </div>
 
               {/* Hover accent line */}
-              <div className="w-0 group-hover:w-full h-1 bg-[#D3FD50] transition-all duration-500 mt-6 rounded-full"></div>
+              <div className="w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 mt-8 rounded-full glow-accent"></div>
             </div>
           ))}
         </div>

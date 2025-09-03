@@ -108,44 +108,44 @@ const StatsSection = () => {
   }, [hasAnimated])
 
   return (
-    <section id="stats" ref={sectionRef} className='min-h-screen bg-gray-50 text-black relative z-30'>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
+    <section id="stats" ref={sectionRef} className='min-h-screen bg-gradient-to-br from-gray-50 to-white text-black relative depth-3 section-transition'>
+      <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
         {/* Section Header */}
-        <div className='text-center mb-16'>
-          <h2 className='stats-title font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight'>
+        <div className='text-center mb-24 space-y-8'>
+          <h2 className='stats-title font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3'>
             A Few Stats About Us
           </h2>
         </div>
 
         {/* Stats Grid */}
-        <div className='stats-grid grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-12 lg:max-w-5xl max-w-3xl mx-auto'>
+        <div className='stats-grid grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16 lg:max-w-5xl max-w-3xl mx-auto'>
           {statsData.map((stat, index) => (
             <div 
               key={index}
-              className='stat-card group bg-white hover:bg-gray-100 rounded-2xl p-8 lg:p-12 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 text-center'
+              className='stat-card group floating-panel glass-hover glass-click p-12 lg:p-16 text-center gpu-accelerated'
             >
               {/* Icon */}
-              <div className='text-5xl lg:text-6xl mb-6 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-5xl lg:text-6xl mb-8 micro-bounce'>
                 {stat.icon}
               </div>
               
               {/* Number */}
-              <div className='mb-4'>
-                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-300'>
+              <div className='mb-6'>
+                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent'>
                   0
                 </span>
-                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-300'>
+                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent'>
                   {stat.suffix}
                 </span>
               </div>
               
               {/* Label */}
-              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-300'>
+              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-500 text-layer-1'>
                 {stat.label}
               </p>
 
               {/* Hover accent line */}
-              <div className='w-0 group-hover:w-full h-1 bg-[#D3FD50] transition-all duration-500 mt-6 rounded-full mx-auto'></div>
+              <div className='w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 mt-8 rounded-full mx-auto glow-accent'></div>
             </div>
           ))}
         </div>

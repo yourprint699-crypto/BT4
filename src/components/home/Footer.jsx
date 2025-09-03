@@ -41,30 +41,32 @@ const Footer = () => {
   ]
 
   return (
-    <footer ref={footerRef} className='bg-black text-white relative z-30'>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-20 py-12'>
+    <footer ref={footerRef} className='bg-gradient-to-br from-black to-gray-900 text-white relative depth-3'>
+      <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
         {/* Main CTA Section */}
-        <div className='text-center mb-16 footer-content'>
-          <h2 className='font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight'>
+        <div className='text-center mb-20 footer-content'>
+          <div className='floating-panel-dark p-12 lg:p-16 space-y-8'>
+            <h2 className='font-[font2] lg:text-[6vw] text-5xl uppercase mb-8 leading-tight text-layer-3'>
             Let's Talk About Your Project
-          </h2>
-          <div className='inline-flex items-center'>
-            <button className='lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50] hover:bg-[#D3FD50] hover:text-black lg:h-16 h-12 flex items-center px-8 lg:px-12 border-white rounded-full uppercase transition-all duration-300 cursor-pointer group'>
-              <span className='font-[font2] text-lg lg:text-xl group-hover:scale-105 transition-transform duration-300'>
+            </h2>
+            <div className='inline-flex items-center'>
+              <button className='btn-pill btn-primary lg:h-16 h-12 px-8 lg:px-12 group'>
+                <span className='font-[font2] text-lg lg:text-xl'>
                 Inquire Now
-              </span>
-            </button>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Footer Information Grid */}
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12 mb-12'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 lg:gap-12 mb-16'>
           {/* Quick Links */}
-          <div className='footer-content space-y-4'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6'>
+          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
               Quick Links
             </h3>
-            <ul className='space-y-3'>
+            <ul className='space-y-4'>
               <li>
                 <button 
                   onClick={() => {
@@ -73,7 +75,7 @@ const Footer = () => {
                       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }
                   }}
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline text-left'
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline text-left micro-bounce'
                 >
                   Our Portfolio0
                 </button>
@@ -81,7 +83,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/contact"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
                 >
                   Contact
                 </Link>
@@ -89,7 +91,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/privacy-policy"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
                 >
                   Privacy Policy
                 </Link>
@@ -97,7 +99,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/terms-of-service"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
                 >
                   Terms & Conditions
                 </Link>
@@ -105,7 +107,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/affiliate-program"
-                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
+                  className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
                 >
                   Affiliate Program
                 </Link>
@@ -114,11 +116,11 @@ const Footer = () => {
           </div>
 
           {/* Company Address */}
-          <div className='footer-content space-y-4'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6'>
+          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
               Address
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-gray-300 leading-relaxed'>
+            <div className='font-[font1] text-base lg:text-lg text-gray-300 leading-relaxed space-y-2'>
               <p>22 ruelle du Clerc</p>
               <p>59126, Linselles</p>
               <p>(France)</p>
@@ -126,19 +128,19 @@ const Footer = () => {
           </div>
 
           {/* Hours of Operation */}
-          <div className='footer-content space-y-4'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6'>
+          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
               Hours
             </h3>
-            <div className='font-[font1] text-base lg:text-lg text-gray-300 space-y-2'>
+            <div className='font-[font1] text-base lg:text-lg text-gray-300 space-y-3'>
               <p>M–F: 9am – 7pm (UTC+1)</p>
               <p>Saturday & Sunday: Closed</p>
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className='footer-content space-y-4'>
-            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6'>
+          <div className='footer-content floating-panel-dark p-6 lg:p-8 space-y-6'>
+            <h3 className='font-[font2] text-xl lg:text-2xl uppercase text-[#D3FD50] mb-6 text-layer-2'>
               Contact
             </h3>
             <div className='font-[font1] text-base lg:text-lg text-gray-300'>
@@ -146,7 +148,7 @@ const Footer = () => {
                 href="mailto:contact@amouraworks.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className='hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
+                className='hover:text-[#D3FD50] transition-colors duration-500 hover:underline micro-bounce'
               >
                 contact@amouraworks.com
               </a>
@@ -155,9 +157,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Border Line */}
-        <div className='border-t border-gray-800 pt-8'>
+        <div className='floating-panel-dark p-6 text-center'>
           <div className='text-center'>
-            <p className='font-[font1] text-sm lg:text-base text-gray-500'>
+            <p className='font-[font1] text-sm lg:text-base text-gray-400'>
               © 2025 Amoura Works. All rights reserved.
             </p>
           </div>

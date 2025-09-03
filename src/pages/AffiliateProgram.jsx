@@ -53,38 +53,40 @@ const AffiliateProgram = () => {
   ]
 
   return (
-    <PageWrapper className='bg-white text-black'>
-      <div className='container mx-auto lg:px-12 px-6 py-24'>
-        <div className='max-w-6xl mx-auto'>
+    <PageWrapper className='bg-gradient-to-br from-gray-50 to-white text-black'>
+      <div className='container mx-auto lg:px-12 px-6 py-32'>
+        <div className='max-w-7xl mx-auto'>
           {/* Header */}
-          <div className='text-center mb-16'>
-            <h1 className='font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight'>
+          <div className='text-center mb-24 space-y-8'>
+            <h1 className='font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3'>
               Affiliate Program
             </h1>
-            <p className='font-[font1] lg:text-xl text-lg lg:max-w-3xl max-w-xl mx-auto leading-relaxed text-gray-700'>
+            <div className='floating-panel max-w-3xl mx-auto p-8'>
+              <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700'>
               Rejoignez notre programme d'affiliation et gagnez des commissions en recommandant nos services de vidéographie de mariage premium.
-            </p>
+              </p>
+            </div>
           </div>
 
           {/* Commission Highlight */}
-          <div className='text-center mb-16'>
-            <div className='bg-[#D3FD50] rounded-2xl p-8 lg:p-12 inline-block'>
-              <h2 className='font-[font2] text-4xl lg:text-6xl uppercase text-black mb-4'>
+          <div className='text-center mb-20'>
+            <div className='floating-panel bg-gradient-to-br from-[#D3FD50] to-[#b8e03e] p-12 lg:p-16 inline-block glow-accent glass-hover'>
+              <h2 className='font-[font2] text-4xl lg:text-6xl uppercase text-black mb-6 text-layer-2'>
                 15% Lifetime
               </h2>
-              <p className='font-[font1] text-xl lg:text-2xl text-black'>
+              <p className='font-[font1] text-xl lg:text-2xl text-black text-layer-1'>
                 Commission Rate
               </p>
             </div>
           </div>
 
           {/* Program Overview */}
-          <section className='mb-16'>
-            <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-black mb-8 text-center'>
+          <section className='mb-20'>
+            <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-black mb-12 text-center text-layer-2'>
               Program Overview
             </h2>
-            <div className='bg-gray-50 rounded-2xl p-8 lg:p-12'>
-              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 text-center'>
+            <div className='floating-panel p-10 lg:p-12'>
+              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 text-center text-layer-1'>
                 Our affiliate program is designed for wedding professionals, influencers, and anyone with connections in the wedding industry. 
                 Earn substantial commissions by referring couples to our premium wedding videography services.
               </p>
@@ -92,30 +94,30 @@ const AffiliateProgram = () => {
           </section>
 
           {/* Benefits Grid */}
-          <section className='mb-16'>
-            <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-black mb-12 text-center'>
+          <section className='mb-20'>
+            <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-black mb-16 text-center text-layer-2'>
               Program Benefits
             </h2>
-            <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-12'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16'>
               {benefits.map((benefit, index) => (
                 <div 
                   key={index}
-                  className='group bg-gray-50 hover:bg-gray-100 rounded-2xl p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:-translate-y-2'
+                  className='group floating-panel glass-hover glass-click p-10 lg:p-12 gpu-accelerated'
                 >
-                  <div className='text-5xl lg:text-6xl mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <div className='text-5xl lg:text-6xl mb-8 micro-bounce'>
                     {benefit.icon}
                   </div>
                   
-                  <div className='space-y-4'>
-                    <h3 className='font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-300'>
+                  <div className='space-y-6'>
+                    <h3 className='font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2'>
                       {benefit.title}
                     </h3>
-                    <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600'>
+                    <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1'>
                       {benefit.description}
                     </p>
                   </div>
 
-                  <div className='w-0 group-hover:w-full h-1 bg-[#D3FD50] transition-all duration-500 mt-6 rounded-full'></div>
+                  <div className='w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 mt-8 rounded-full glow-accent'></div>
                 </div>
               ))}
             </div>
@@ -228,9 +230,9 @@ const AffiliateProgram = () => {
           <div className='text-center'>
             <Link 
               to='/contact'
-              className='lg:border-3 border-2 hover:border-[#D3FD50] hover:bg-[#D3FD50] hover:text-black lg:h-16 h-12 flex items-center justify-center px-12 lg:px-16 border-black rounded-full uppercase transition-all duration-300 cursor-pointer group inline-flex'
+              className='btn-pill btn-primary lg:h-16 h-12 px-12 lg:px-16 inline-flex items-center justify-center group'
             >
-              <span className='font-[font2] text-lg lg:text-xl group-hover:scale-105 transition-transform duration-300'>
+              <span className='font-[font2] text-lg lg:text-xl'>
                 Apply Now
               </span>
             </Link>

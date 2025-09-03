@@ -9,15 +9,15 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='bg-gray-900 rounded-2xl p-8 lg:p-10'>
-      <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-[#D3FD50] mb-8'>
+    <div className='floating-panel-dark p-10 lg:p-12'>
+      <h2 className='font-[font2] text-3xl lg:text-4xl uppercase text-[#D3FD50] mb-10 text-layer-2'>
         Inquire Now
       </h2>
       
       <PersistentForm 
         formId="contact-inquiry" 
         onSubmit={handleSubmit}
-        className='space-y-6'
+        className='space-y-8'
       >
         <ContactFormFields />
       </PersistentForm>
@@ -35,7 +35,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
 
   return (
     <>
-      <div className='grid lg:grid-cols-2 grid-cols-1 gap-4'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 gap-6'>
         <input 
           type="text" 
           name="firstName"
@@ -43,7 +43,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
           value={formData.firstName || ''}
           onChange={handleChange}
           required
-          className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+          className='w-full input-inset text-white placeholder-gray-400'
         />
         <input 
           type="text" 
@@ -52,7 +52,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
           value={formData.lastName || ''}
           onChange={handleChange}
           required
-          className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+          className='w-full input-inset text-white placeholder-gray-400'
         />
       </div>
       
@@ -63,7 +63,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.email || ''}
         onChange={handleChange}
         required
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+        className='w-full input-inset text-white placeholder-gray-400'
       />
       
       <input 
@@ -72,7 +72,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         placeholder="Phone Number"
         value={formData.phone || ''}
         onChange={handleChange}
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+        className='w-full input-inset text-white placeholder-gray-400'
       />
       
       <input 
@@ -82,7 +82,7 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.weddingDate || ''}
         onChange={handleChange}
         required
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+        className='w-full input-inset text-white placeholder-gray-400'
       />
       
       <input 
@@ -91,14 +91,14 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         placeholder="Wedding Venue"
         value={formData.venue || ''}
         onChange={handleChange}
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+        className='w-full input-inset text-white placeholder-gray-400'
       />
       
       <select 
         name="package"
         value={formData.package || ''}
         onChange={handleChange}
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+        className='w-full input-inset text-white'
       >
         <option value="">Select Package</option>
         <option value="essential">Essential Package</option>
@@ -113,12 +113,12 @@ const ContactFormFields = ({ formData = {}, onInputChange }) => {
         value={formData.message || ''}
         onChange={handleChange}
         rows="5"
-        className='w-full px-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300 resize-none'
+        className='w-full input-inset text-white placeholder-gray-400 resize-none'
       />
       
       <button 
         type="submit"
-        className='w-full lg:h-16 h-14 bg-[#D3FD50] hover:bg-[#b8e03e] text-black font-[font2] text-xl lg:text-2xl uppercase rounded-lg transition-all duration-300 hover:scale-105'
+        className='w-full btn-pill btn-primary lg:h-16 h-14 font-[font2] text-xl lg:text-2xl'
       >
         Send Inquiry
       </button>

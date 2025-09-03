@@ -84,56 +84,58 @@ const CTASection = () => {
     <section
       id="cta"
       ref={sectionRef}
-      className="min-h-screen bg-black text-white relative z-30 flex items-center"
+      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative depth-3 flex items-center section-transition"
       role="region"
       aria-labelledby="cta-heading"
     >
-      <div className="container mx-auto lg:px-12 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 
+      <div className="container mx-auto lg:px-12 px-6 text-center w-full">
+        <div className="max-w-5xl mx-auto">
+          <div className="floating-panel-dark p-12 lg:p-20 space-y-12">
+            <h2 
             id="cta-heading"
-            className="cta-fade font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight"
-          >
+              className="cta-fade font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3"
+            >
             Ready to Create Magic?
-          </h2>
+            </h2>
 
-          <p className="cta-fade font-[font1] lg:text-2xl text-xl leading-relaxed text-gray-300 mb-12 lg:max-w-3xl max-w-xl mx-auto">
+            <p className="cta-fade font-[font1] lg:text-2xl text-xl leading-relaxed text-gray-300 lg:max-w-3xl max-w-xl mx-auto text-layer-1">
             Transformons votre jour spécial en un chef-d'œuvre cinématographique qui raconte votre histoire unique.
-          </p>
+            </p>
 
-          <div className="cta-fade space-y-6 lg:space-y-0 lg:space-x-6 lg:flex lg:justify-center lg:items-center">
-            <Link
+            <div className="cta-fade space-y-6 lg:space-y-0 lg:space-x-8 lg:flex lg:justify-center lg:items-center">
+              <Link
               to="/contact"
-              className="lg:border-3 border-2 hover:border-[#D3FD50] hover:bg-[#D3FD50] hover:text-black lg:h-20 h-16 flex items-center justify-center px-12 lg:px-16 border-white rounded-full uppercase transition-all duration-300 cursor-pointer group inline-flex focus:outline-none focus:ring-4 focus:ring-[#D3FD50]/50"
+                className="btn-pill btn-primary lg:h-20 h-16 px-12 lg:px-16 inline-flex items-center justify-center group focus:outline-none"
               aria-label="Get started with our wedding videography services"
-            >
-              <span className="font-[font2] text-xl lg:text-2xl group-hover:scale-105 transition-transform duration-300">
+              >
+                <span className="font-[font2] text-xl lg:text-2xl">
                 Get Started Today
-              </span>
-            </Link>
+                </span>
+              </Link>
 
-            <Link
+              <Link
               to="/projects"
-              className="lg:border-3 border-2 border-gray-600 hover:border-white text-gray-300 hover:text-white lg:h-20 h-16 flex items-center justify-center px-12 lg:px-16 rounded-full uppercase transition-all duration-300 cursor-pointer group inline-flex focus:outline-none focus:ring-4 focus:ring-white/50"
+                className="btn-pill btn-secondary lg:h-20 h-16 px-12 lg:px-16 inline-flex items-center justify-center group focus:outline-none"
               aria-label="View our wedding videography portfolio"
-            >
-              <span className="font-[font2] text-xl lg:text-2xl group-hover:scale-105 transition-transform duration-300">
+              >
+                <span className="font-[font2] text-xl lg:text-2xl">
                 View Our Work
-              </span>
-            </Link>
-          </div>
+                </span>
+              </Link>
+            </div>
 
-          <div className="cta-fade mt-16 grid lg:grid-cols-3 grid-cols-1 gap-8 text-center">
-            {statsData.map((stat, index) => (
-              <div key={stat.label} className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-[font2] text-[#D3FD50]">
+            <div className="cta-fade grid lg:grid-cols-3 grid-cols-1 gap-8 text-center">
+              {statsData.map((stat, index) => (
+                <div key={stat.label} className="floating-panel glass-hover p-6 space-y-4">
+                  <div className="text-3xl lg:text-4xl font-[font2] text-[#D3FD50] glow-accent text-layer-2">
                   {stat.value}
-                </div>
-                <div className="font-[font1] text-sm lg:text-base text-gray-400 uppercase tracking-wide">
+                  </div>
+                  <div className="font-[font1] text-sm lg:text-base text-gray-400 uppercase tracking-wide text-layer-1">
                   {stat.label}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

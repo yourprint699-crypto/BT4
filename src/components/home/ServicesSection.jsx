@@ -79,46 +79,48 @@ const ServicesSection = () => {
   ]
 
   return (
-    <section id="services" ref={sectionRef} className='min-h-screen bg-white text-black relative z-30'>
-      <div className='container mx-auto lg:px-12 px-6 lg:py-24 py-16'>
-        <div className='text-center mb-16'>
-          <h2 className='services-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight'>
+    <section id="services" ref={sectionRef} className='min-h-screen bg-gradient-to-br from-white to-gray-50 text-black relative depth-3 section-transition'>
+      <div className='container mx-auto lg:px-12 px-6 lg:py-32 py-20'>
+        <div className='text-center mb-24 space-y-8'>
+          <h2 className='services-title font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight text-layer-3'>
             Services
           </h2>
-          <p className='font-[font1] lg:text-xl text-lg lg:max-w-3xl max-w-xl mx-auto leading-relaxed text-gray-700'>
+          <div className='floating-panel max-w-3xl mx-auto p-8'>
+            <p className='font-[font1] lg:text-xl text-lg leading-relaxed text-gray-700'>
             Everything you need to relive your wedding. beautifully filmed, thoughtfully crafted, and made just for you.
-          </p>
+            </p>
+          </div>
         </div>
 
-        <div className='services-grid grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-12'>
+        <div className='services-grid grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16'>
           {services.map((service, index) => (
             <div 
               key={index}
-              className='service-card group bg-gray-50 hover:bg-gray-100 rounded-2xl p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:-translate-y-2'
+              className='service-card group floating-panel glass-hover glass-click p-10 lg:p-12 gpu-accelerated'
             >
-              <div className='text-5xl lg:text-6xl mb-6 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-5xl lg:text-6xl mb-8 micro-bounce'>
                 {service.icon}
               </div>
               
-              <div className='space-y-4 mb-6'>
-                <h3 className='font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-300'>
+              <div className='space-y-6 mb-8'>
+                <h3 className='font-[font2] text-2xl lg:text-3xl uppercase text-black group-hover:text-[#D3FD50] transition-colors duration-500 text-layer-2'>
                   {service.title}
                 </h3>
-                <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600'>
+                <p className='font-[font1] text-base lg:text-lg leading-relaxed text-gray-600 text-layer-1'>
                   {service.description}
                 </p>
               </div>
 
-              <ul className='space-y-2'>
+              <ul className='space-y-3 mb-8'>
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className='flex items-center font-[font1] text-sm lg:text-base text-gray-600'>
-                    <span className='w-2 h-2 bg-[#D3FD50] rounded-full mr-3 group-hover:scale-125 transition-transform duration-300'></span>
+                    <span className='w-3 h-3 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] rounded-full mr-4 micro-bounce glow-accent'></span>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className='w-0 group-hover:w-full h-1 bg-[#D3FD50] transition-all duration-500 mt-6 rounded-full'></div>
+              <div className='w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 rounded-full glow-accent'></div>
             </div>
           ))}
         </div>
