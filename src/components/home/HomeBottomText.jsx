@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 const HomeBottomText = () => {
   return (
@@ -8,14 +7,6 @@ const HomeBottomText = () => {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         text
       </p>
-      <div className="btn-pill btn-secondary lg:h-44 h-32 px-3 pt-1 lg:px-14 group glass glow-accent animate-glow-pulse">
-        <Link
-          className="text-[6vw] lg:mt-6 text-layer-3"
-          to="/projects"
-        >
-          Projects
-        </Link>
-      </div>
     </div>
   );
 };
