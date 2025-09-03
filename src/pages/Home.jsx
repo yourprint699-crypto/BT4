@@ -2,6 +2,7 @@ import React, { useRef, useContext, useEffect } from 'react'
 import Video from '../components/home/Video'
 import HomeHeroText from '../components/home/HomeHeroText'
 import HomeBottomText from '../components/home/HomeBottomText'
+import Header from '../components/common/Header'
 import WhyUsSection from '../components/home/WhyUsSection'
 import PortfolioSection from '../components/home/PortfolioSection'
 import StatsSection from '../components/home/StatsSection'
@@ -36,6 +37,9 @@ const Home = () => {
 
   return (
     <div className='text-white relative'>
+      {/* Cinematic Header Overlay */}
+      <Header />
+      
       {/* Fixed video background */}
       <div className='h-screen w-screen fixed top-0 left-0 z-0'>
         <Video />
