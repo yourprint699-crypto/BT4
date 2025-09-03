@@ -408,12 +408,12 @@ body.loading {
 
 /* Glow effects */
 .glow-accent {
-    box-shadow: 0 0 20px rgba(211, 253, 80, 0.3);
+    filter: drop-shadow(0 0 8px rgba(211, 253, 80, 0.4));
     transition: box-shadow 0.3s ease;
 }
 
 .glow-accent:hover {
-    box-shadow: 0 0 40px rgba(211, 253, 80, 0.5);
+    filter: drop-shadow(0 0 12px rgba(211, 253, 80, 0.6));
 }
 
 /* Text hierarchy through layering */
@@ -421,18 +421,57 @@ body.loading {
     position: relative;
     z-index: 10;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .text-layer-2 {
     position: relative;
     z-index: 20;
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .text-layer-3 {
     position: relative;
     z-index: 30;
     text-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Fix for stats number hover background issue */
+.counter-number {
+    background: transparent !important;
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.counter-number:hover,
+.counter-number:focus,
+.counter-number:active {
+    background: transparent !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: inherit !important;
 }
 
 /* Smooth section transitions */
