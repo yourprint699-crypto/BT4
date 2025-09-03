@@ -131,21 +131,21 @@ const StatsSection = () => {
               
               {/* Number */}
               <div className='mb-6'>
-                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
+                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
                   0
                 </span>
-                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
+                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
                   {stat.suffix}
                 </span>
               </div>
               
               {/* Label */}
-              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-500 text-layer-1'>
+              <p className='font-[font1] text-lg lg:text-xl leading-relaxed text-gray-700 text-layer-1'>
                 {stat.label}
               </p>
 
               {/* Hover accent line */}
-              <div className='w-0 group-hover:w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] transition-all duration-700 mt-8 rounded-full mx-auto glow-accent'></div>
+              <div className='w-full h-2 bg-gradient-to-r from-[#D3FD50] to-[#b8e03e] mt-8 rounded-full mx-auto glow-accent'></div>
             </div>
           ))}
         </div>
