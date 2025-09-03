@@ -50,7 +50,7 @@ const Home = () => {
       {/* Scrollable content */}
       <div className='relative z-20'>
         {/* Hero Section */}
-        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content'>
+        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content' style={{ paddingTop: '100px' }}>
           <HomeHeroText />
           <HomeBottomText />
         </div>

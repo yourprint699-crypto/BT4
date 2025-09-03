@@ -309,6 +309,29 @@ body.loading {
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
 
+/* Header positioning and hero spacing */
+.hero-section {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+/* Ensure header stays above all content */
+header {
+    z-index: 1000 !important;
+}
+
+/* Mobile responsive header spacing */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        padding-top: 140px;
+    }
+}
 /* Parallax container enhancements */
 .parallax-container {
     transform-style: preserve-3d;
