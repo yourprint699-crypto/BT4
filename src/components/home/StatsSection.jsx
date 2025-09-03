@@ -131,10 +131,10 @@ const StatsSection = () => {
               
               {/* Number */}
               <div className='mb-6'>
-                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent'>
+                <span className='counter-number font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
                   0
                 </span>
-                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent'>
+                <span className='font-[font2] text-4xl lg:text-5xl text-[#D3FD50] group-hover:text-black transition-colors duration-500 text-layer-2 glow-accent' style={{background: 'none', backgroundColor: 'transparent'}}>
                   {stat.suffix}
                 </span>
               </div>
